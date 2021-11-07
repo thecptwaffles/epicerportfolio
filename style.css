@@ -14,10 +14,12 @@ html::-webkit-scrollbar{
 }
 
 :root {
-  --dark-bg: rgba(15, 15, 15, 0.95);
+  --dark-bg: #2f366dc7;
   --spacing: 350px;
-
-  font-family: brandon-grotesque, sans-serif;
+  --prim-font: 'Montserrat', sans-serif;
+  --sec-font: 'Source Sans Pro', sans-serif;
+  --font-clr: #ffffff;
+  font-family: var(--sec-font);
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
@@ -29,7 +31,7 @@ html::-webkit-scrollbar{
 
 main {
   width: 100vw;
-  color: white;
+  color: var(--font-clr);
   z-index: 99;
   position: absolute;
   width: 100%;
@@ -40,10 +42,11 @@ main {
   grid-template-columns: repeat(12, 1fr);
 }
 
-h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
+h1, h2, h3 {
+  font-family: var(--prim-font);
   font-weight: 700;
   font-style: normal;
+  font-size: 4rem;
 }
 
 canvas {
@@ -74,18 +77,18 @@ canvas {
   blockquote {
     margin: 0;
     padding: 0;
-    grid-column: 2 / span 9;
+    grid-column: 2 / span 2;
     margin-bottom: var(--spacing);
   
   }
 
 
   blockquote a {
-    text-decoration: underline;
-    color: white;
-    font-size: 2rem;
-    background: black;
-    
+    text-decoration: none;
+    color: var(--font-clr);
+    font-size: 2.25rem;
+    background: var(--dark-bg);
+    font: var(--sec-font);
   }
 
   .left {
@@ -99,5 +102,33 @@ canvas {
 main {
   position: absolute;
   font-size: 5rem;
-  color: white;
+  color: var(--font-clr);
+}
+
+.wdr {
+  background: var(--dark-bg);
+  text-align: center;
+  font-size: 4rem;
+}
+
+p {
+  font-family: var(--sec-font);
+  font-size: 2.25rem;
+}
+
+code {
+  font-size: 2.25rem;
+}
+
+embed::-webkit-scrollbar {
+  display: none;
+}
+
+embed {
+  ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.epic {
+  font-size: 5.25rem;
 }

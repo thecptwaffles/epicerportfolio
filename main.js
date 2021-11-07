@@ -19,9 +19,11 @@ camera.position.setZ(30);
 
 renderer.render( scene,  camera);
 //adding shape
-const geometry = new THREE.TorusGeometry( 10, 3, 16, 100);
-const material = new THREE.MeshPhysicalMaterial( {color: 0x00bf79, wireframe: false}) 
+const geometry = new THREE.TorusGeometry( 10.75, 3, 30, 100);
+const material = new THREE.MeshBasicMaterial( { color:0xa95634}) 
 const torus = new THREE.Mesh( geometry, material );
+
+
 
 scene.add(torus)
 //lighting
@@ -38,9 +40,7 @@ function animate() {
 
   requestAnimationFrame( animate );
   renderer.render( scene, camera);
-  torus.rotation.x += 0.01;
-  torus.rotation.y += 0.005;
-  torus.rotation.z += 0.005;
+
 
 }
 //stars
@@ -60,16 +60,16 @@ function addStar() {
 const spacetexture = new THREE.TextureLoader().load('space.jpg');
 scene.background = spacetexture;
 
-Array(200).fill().forEach(addStar);
+Array(500).fill().forEach(addStar);
 
 animate()
 
-//avatar
+//waffle
 
 const waffleTexture = new THREE.TextureLoader().load('skin.png');
 
 const Cptwaffles = new THREE.Mesh(
-  new THREE.CylinderGeometry(3,3,1),
+  new THREE.CylinderGeometry(4,4,1),
   new THREE.MeshBasicMaterial( { map:waffleTexture})
 )
 
@@ -83,6 +83,7 @@ Cptwaffles.position.setX(-10)
 Cptwaffles.position.z = -5;
 Cptwaffles.position.x = 2;
 
+
 //scroll animation
 
 function movecamera(){
@@ -92,6 +93,9 @@ function movecamera(){
   Cptwaffles.rotation.y += 0.01;
   Cptwaffles.rotation.z += 0.01;
 
+  torus.rotation.x += 0.02;
+  torus.rotation.z += 0.01;
+
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
   camera.rotation.y = t * -0.0002;
@@ -99,3 +103,4 @@ function movecamera(){
 }
 
 document.body.onscroll = movecamera
+
