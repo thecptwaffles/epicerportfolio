@@ -1,0 +1,134 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Source+Sans+Pro:wght@200&display=swap');
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+html::-webkit-scrollbar{
+  display: none;
+}
+
+:root {
+  --dark-bg: #2f366dc7;
+  --spacing: 350px;
+  --prim-font: 'Montserrat', sans-serif;
+  --sec-font: 'Source Sans Pro', sans-serif;
+  --font-clr: #ffffff;
+  font-family: var(--sec-font);
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+main {
+  width: 100vw;
+  color: var(--font-clr);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1, h2, h3 {
+  font-family: var(--prim-font);
+  font-weight: 700;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / span 2;
+    margin-bottom: var(--spacing);
+  
+  }
+
+
+  blockquote a {
+    text-decoration: none;
+    color: var(--font-clr);
+    font-size: 2.25rem;
+    background: var(--dark-bg);
+    font: var(--sec-font);
+  }
+
+  .left {
+    grid-column: 6 / 12;
+  }canvas  {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+main {
+  position: absolute;
+  font-size: 5rem;
+  color: var(--font-clr);
+}
+
+.wdr {
+  background: var(--dark-bg);
+  text-align: center;
+  font-size: 4rem;
+}
+
+p {
+  font-family: var(--sec-font);
+  font-size: 2.25rem;
+}
+
+code {
+  font-size: 2.25rem;
+}
+
+embed::-webkit-scrollbar {
+  display: none;
+}
+
+embed {
+  ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.epic {
+  font-size: 5.25rem;
+}
